@@ -1,6 +1,6 @@
 # 🔥 Bare Metal C - Neovim Configuration
 
-Professional Neovim configuration optimized for **C/C++ development** with Apple-style UI and instant response.
+Professional Neovim configuration optimized for **C development**.
 
 > Forked from [Magicalbat/Configs](https://github.com/Magicalbat/Configs) and enhanced with advanced features.
 
@@ -54,10 +54,6 @@ nvim
 - clangd (for C/C++ LSP)
 - A Nerd Font (for icons)
 - ripgrep (for Telescope)
-
-## 🎨 Theme
-
-Gold-to-orange gradient dashboard with instant Apple-style response. No delays, pure performance.
 
 ## 📄 License
 
