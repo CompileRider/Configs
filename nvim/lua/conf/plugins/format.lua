@@ -14,7 +14,33 @@ return {
     formatters = {
       clang_format = {
         prepend_args = {
-          "--style={BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4, UseTab: Never, BreakBeforeBraces: Allman, AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: true, ColumnLimit: 100, PointerAlignment: Right, SpaceAfterCStyleCast: true}",
+          "--style={"
+            .. "BasedOnStyle: LLVM, "
+            .. "IndentWidth: 8, "
+            .. "TabWidth: 8, "
+            .. "UseTab: Always, "
+            .. "ColumnLimit: 80, "
+            .. "BreakBeforeBraces: Linux, "
+            .. "AllowShortFunctionsOnASingleLine: None, "
+            .. "AllowShortIfStatementsOnASingleLine: false, "
+            .. "AllowShortLoopsOnASingleLine: false, "
+            .. "AllowShortBlocksOnASingleLine: false, "
+            .. "IndentCaseLabels: false, "
+            .. "IndentGotoLabels: false, "
+            .. "PointerAlignment: Right, "
+            .. "SpaceAfterCStyleCast: false, "
+            .. "SpaceBeforeParens: ControlStatementsExceptForEachMacros, "
+            .. "AlignAfterOpenBracket: Align, "
+            .. "AlignTrailingComments: false, "
+            .. "AlignConsecutiveAssignments: false, "
+            .. "AlignConsecutiveDeclarations: false, "
+            .. "AlignOperands: true, "
+            .. "BinPackArguments: true, "
+            .. "BinPackParameters: true, "
+            .. "ContinuationIndentWidth: 8, "
+            .. "ReflowComments: false, "
+            .. "SortIncludes: false"
+            .. "}",
         },
       },
     },
