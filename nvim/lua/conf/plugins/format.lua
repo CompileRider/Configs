@@ -5,7 +5,7 @@ return {
   opts = {
     formatters_by_ft = {
       c = { "clang_format" },
-      h = { "clang_format" },
+      cpp = { "clang_format" },
     },
     format_on_save = {
       timeout_ms = 500,
@@ -13,7 +13,9 @@ return {
     },
     formatters = {
       clang_format = {
-        prepend_args = { "--style=file" },
+        prepend_args = {
+          "--style={BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4, UseTab: Never, BreakBeforeBraces: Allman, AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: true, ColumnLimit: 100, PointerAlignment: Right, SpaceAfterCStyleCast: true}",
+        },
       },
     },
   },
