@@ -113,3 +113,14 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+
+-- Quickfix navigation
+keymap("n", "]q", "<cmd>cnext<cr>zz", { desc = "Next quickfix" })
+keymap("n", "[q", "<cmd>cprev<cr>zz", { desc = "Prev quickfix" })
+keymap("n", "]Q", "<cmd>clast<cr>zz", { desc = "Last quickfix" })
+keymap("n", "[Q", "<cmd>cfirst<cr>zz", { desc = "First quickfix" })
+
+-- Diagnostic navigation
+keymap("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
+keymap("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
