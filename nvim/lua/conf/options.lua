@@ -55,6 +55,29 @@ vim.api.nvim_create_autocmd("FileType", {
     group = "FileTypeSpecific",
 })
 
+-- Linux Kernel coding style for C files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "h" },
+    callback = function()
+        vim.opt_local.expandtab = false    -- Use tabs, not spaces
+        vim.opt_local.tabstop = 8          -- Tabs are 8 characters
+        vim.opt_local.shiftwidth = 8       -- Indentation is 8 characters
+        vim.opt_local.softtabstop = 8      -- Soft tabs are 8 characters
+        vim.opt_local.textwidth = 80       -- Line length limit
+        vim.opt_local.cindent = true       -- C-style indentation
+        vim.opt_local.commentstring = "/* %s */"  -- Use /* */ comments
+        
+        -- Auto-convert // to /* */ in C files
+        vim.keymap.set("i", "//", "/* ", { buffer = true })
+        
+        -- Command to convert existing // comments to /* */
+        vim.api.nvim_buf_create_user_command(0, "ConvertComments", function()
+            vim.cmd([[%s/\/\/\s*\(.*\)/\/* \1 *\//g]])
+        end, { desc = "Convert // comments to /* */" })
+    end,
+    group = "FileTypeSpecific",
+})
+
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 

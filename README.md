@@ -1,6 +1,64 @@
-# Configs
+# 🔥 Bare Metal C - Neovim Configuration
 
-A repository to store my config files.
+Professional Neovim configuration optimized for **C/C++ development** with Apple-style UI and instant response.
 
-## Neovim
-I set up neovim following [this](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ) tutorial series.
+> Forked from [Magicalbat/Configs](https://github.com/Magicalbat/Configs) and enhanced with advanced features.
+
+## ✨ Features
+
+- **LSP**: Native Neovim 0.11+ LSP with clangd (optimized flags)
+- **Completion**: nvim-cmp with LuaSnip snippets
+- **Treesitter**: Advanced syntax highlighting
+- **Dashboard**: Custom Bare Metal theme with gradient colors
+- **Animations**: Smooth cursor, scroll, and window transitions (mini.animate)
+- **File Explorer**: Neo-tree with icons
+- **Fuzzy Finder**: Telescope
+- **Git**: Gitsigns integration
+
+## 🚀 C/C++ Snippets
+
+Complete preprocessor directive snippets:
+
+| Snippet | Output |
+|---------|--------|
+| `#include` | `#include <header>` |
+| `#define` | `#define NAME value` |
+| `#ifdef` | `#ifdef MACRO ... #endif` |
+| `#ifndef` | `#ifndef MACRO ... #endif` |
+| `#endif` | `#endif` |
+| `#pragma` | `#pragma once` |
+| `guard` | Complete header guard |
+| `#externc` | Extern C block for C++ |
+| `#ifwin` | Windows platform check |
+| `#iflinux` | Linux platform check |
+
+Plus: `main`, `for`, `while`, `struct`, `typedef`, `malloc`, `printf`, and more.
+
+## 📦 Installation
+
+```bash
+# Backup existing config
+mv ~/.config/nvim ~/.config/nvim.bak
+
+# Clone this repo
+git clone https://github.com/CompileRider/Configs.git
+ln -s ~/Configs/nvim ~/.config/nvim
+
+# Start Neovim (plugins install automatically)
+nvim
+```
+
+## ⚙️ Requirements
+
+- Neovim 0.11+
+- clangd (for C/C++ LSP)
+- A Nerd Font (for icons)
+- ripgrep (for Telescope)
+
+## 🎨 Theme
+
+Gold-to-orange gradient dashboard with instant Apple-style response. No delays, pure performance.
+
+## 📄 License
+
+MIT
