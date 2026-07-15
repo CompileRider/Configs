@@ -15,7 +15,7 @@ Another stupid C configuration
 - **Fuzzy Finder**: Telescope
 - **Git**: Gitsigns integration
 
-## 🚀 C/C++ Snippets
+## C/C++ Snippets
 
 Complete preprocessor directive snippets:
 
@@ -34,7 +34,7 @@ Complete preprocessor directive snippets:
 
 Plus: `main`, `for`, `while`, `struct`, `typedef`, `malloc`, `printf`, and more.
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Backup existing config
@@ -48,7 +48,7 @@ ln -s ~/Configs/nvim ~/.config/nvim
 nvim
 ```
 
-## ⚙️ Requirements
+## Requirements
 
 - Neovim 0.11+
 - clangd (for C/C++ LSP)
