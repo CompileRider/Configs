@@ -1,10 +1,10 @@
-# 🔥 Bare Metal C - Neovim Configuration
+# C Neovim Configuration
 
-Professional Neovim configuration optimized for **C development**.
+Another stupid C configuration
 
-> Forked from [Magicalbat/Configs](https://github.com/Magicalbat/Configs) and enhanced with advanced features.
+> Forked from [Magicalbat/Configs](https://github.com/Magicalbat/Configs) I've made a lot of improvements you obviously won't use.
 
-## ✨ Features
+## Features
 
 - **LSP**: Native Neovim 0.11+ LSP with clangd (optimized flags)
 - **Completion**: nvim-cmp with LuaSnip snippets
